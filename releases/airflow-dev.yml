@@ -8,23 +8,23 @@ metadata:
 spec:
   releaseName: airflow-dev
   chart:
-    repository: https://airflow.apache.org
+    repository: https://marclamberti.github.io/airflow-eks-helm-chart
     name: airflow
     version: 1.0.0
   values:
     fernetKey: "zTxhk7FuGqQVPZVoukLn5bGWOrgHzhQnBnaqAItcZGI="
     defaultAirflowTag: "1.10.10-2-python3.7"
     env:
-      - name: AIRFLOW__KUBERNETES__DAGS_IN_IMAGE 
+      - name: "AIRFLOW__KUBERNETES__DAGS_IN_IMAGE"
         value: "True"
-      - name: AIRFLOW__KUBERNETES__NAMESPACE 
+      - name: "AIRFLOW__KUBERNETES__NAMESPACE"
         value: "dev"
-      - name: AIRFLOW__KUBERNETES__WORKER_CONTAINER_REPOSITORY 
+      - name: "AIRFLOW__KUBERNETES__WORKER_CONTAINER_REPOSITORY"
         value: "apache/airflow"
-      - name: AIRFLOW__KUBERNETES__WORKER_CONTAINER_TAG 
+      - name: "AIRFLOW__KUBERNETES__WORKER_CONTAINER_TAG"
         value: "1.10.10-2-python3.7"
-      - name: AIRFLOW__KUBERNETES__RUN_AS_USER 
+      - name: "AIRFLOW__KUBERNETES__RUN_AS_USER"
         value: "50000"
-      - name: AIRFLOW__CORE__LOAD_EXAMPLES 
-        value: "False"
+      - name: "AIRFLOW__CORE__LOAD_EXAMPLES"
+        value: "True"
     executor: "KubernetesExecutor"
