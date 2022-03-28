@@ -40,4 +40,4 @@ spec:
         maxFailures: 0
         subpath: ""
         wait: 60
-        sshKeySecret: airflow-git-private-dags
+        sshKeySecret: gitSshKey
