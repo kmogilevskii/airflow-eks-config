@@ -35,9 +35,8 @@ spec:
         enabled: false
       gitSync:
         enabled: true
-        repo: git@github.com:kmogilevskii/airflow-private-dags.git
+        repo: https://github.com/kmogilevskii/airflow-dags.git
         branch: master
         maxFailures: 0
         subpath: ""
         wait: 60
-        sshKeyName: airflow-git-private-dags
